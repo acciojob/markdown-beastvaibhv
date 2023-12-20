@@ -10,3 +10,25 @@ button{
     justify-content: center;
     align-items: center;
 }
+.app{
+    display: flex;
+    flex: 2;
+    
+}
+.textarea{
+    width: 100%;
+    height: 100vh;
+    background-color: gray;
+
+    flex: 1;
+}
+.write{
+    height: 100vh;
+    background-color: blue;
+}
+
+.preview{
+    width: 50%;
+    height: 100%;
+    flex:1;
+}
