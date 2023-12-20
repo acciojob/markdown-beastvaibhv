@@ -15,15 +15,12 @@ const App = () => {
             } else if (line.startsWith('## ')) {
                 const headingText = line.substring(3); // Extract text after '## '
                 components.push(<h2 key={components.length}>{headingText}</h2>);
-            } else if (line.startsWith('*') && line.endsWith('*')) {
-                const italicText = line.substring(1, line.length - 1); // Extract text between '*'
-                components.push(<i key={components.length}>{italicText}</i>);
-            }else if (line.startsWith('__') && line.endsWith('__')) {
-                const StrongText = line.substring(1, line.length - 1); // Extract text between '`'
-                components.push(<strong key={components.length}>{StrongText}</strong>);
-            } else if (line.startsWith('**') && line.endsWith('**')) {
+            }  else if (line.startsWith('**') && line.endsWith('**')) {
                 const boldText = line.substring(2, line.length - 2); // Extract text between '**'
                 components.push(<strong key={components.length}>{boldText}</strong>);
+            }else if (line.startsWith('*') && line.endsWith('*')) {
+                const italicText = line.substring(1, line.length - 1); // Extract text between '*'
+                components.push(<i key={components.length}>{italicText}</i>);
             } else if (line.startsWith('[') && line.endsWith(')')) {
                 const linkText = line.substring(line.lastIndexOf('[') + 1, line.lastIndexOf(']')); // Extract link text
                 const linkUrl = line.substring(line.lastIndexOf('(') + 1, line.lastIndexOf(')')); // Extract link URL
