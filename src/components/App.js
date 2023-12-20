@@ -18,6 +18,9 @@ const App = () => {
             } else if (line.startsWith('*') && line.endsWith('*')) {
                 const italicText = line.substring(1, line.length - 1); // Extract text between '*'
                 components.push(<i key={components.length}>{italicText}</i>);
+            }else if (line.startsWith('`') && line.endsWith('`')) {
+                const StrongText = line.substring(1, line.length - 1); // Extract text between '*'
+                components.push(<strong key={components.length}>{StrongText}</strong>);
             } else if (line.startsWith('**') && line.endsWith('**')) {
                 const boldText = line.substring(2, line.length - 2); // Extract text between '**'
                 components.push(<b key={components.length}>{boldText}</b>);
