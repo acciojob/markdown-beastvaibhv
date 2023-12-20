@@ -23,7 +23,7 @@ const App = () => {
                 components.push(<strong key={components.length}>{StrongText}</strong>);
             } else if (line.startsWith('**') && line.endsWith('**')) {
                 const boldText = line.substring(2, line.length - 2); // Extract text between '**'
-                components.push(<b key={components.length}>{boldText}</b>);
+                components.push(<strong key={components.length}>{boldText}</strong>);
             } else if (line.startsWith('[') && line.endsWith(')')) {
                 const linkText = line.substring(line.lastIndexOf('[') + 1, line.lastIndexOf(']')); // Extract link text
                 const linkUrl = line.substring(line.lastIndexOf('(') + 1, line.lastIndexOf(')')); // Extract link URL
@@ -68,6 +68,7 @@ const App = () => {
                 {renderedComponents[0]}
             </div>
         </div>
+        
     );
 };
 
