@@ -27,7 +27,7 @@ const App = () => {
                 </div>
                 <div className='preview'>
             
-                    <div className='loading'>{preview}</div>
+                    <h1 className='loading'>{preview}</h1>
                 </div>
 
             </div>
